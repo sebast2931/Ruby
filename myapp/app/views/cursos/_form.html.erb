@@ -1,0 +1,32 @@
+<%= form_with(model: curso, local: true) do |form| %>
+  <% if curso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(curso.errors.count, "error") %> prohibited this curso from being saved:</h2>
+
+      <ul>
+      <% curso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Nombre %>
+    <%= form.text_field :Nombre, id: :curso_Nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dia %>
+    <%= form.text_field :Dia, id: :curso_Dia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Hora %>
+    <%= form.text_field :Hora, id: :curso_Hora %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

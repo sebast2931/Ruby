@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav class='navbar navbar-default'>
+  	<div class='collapse navbar-collapse navbar-ex1-collapse'>
+  		<ul class='nav navbar-nav'>
+  			<li> <%= link_to 'Inicio', root_path %></li>
+  			<li> <%= link_to 'Alumnos', alumnos_path %></li>
+  			<li> <%= link_to 'Profesores', profesores_path %></li>
+  			<li> <%= link_to 'Cursos', cursos_path %></li>
+  		</ul>
+  	</div>
+  </nav>
+    <%= yield %>
+  </body>
+</html>
